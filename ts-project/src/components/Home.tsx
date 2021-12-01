@@ -9,7 +9,7 @@ const Home = () => {
   const [tracks, setTracks] = useState<ISearch[]>([]);
   const [loading, setLoading] = useState(false);
 
-  const fetch = async (query: string) => {
+  const fetchData = async (query: string) => {
     try {
       setLoading(true);
       const resp = await fetch(
@@ -29,8 +29,8 @@ const Home = () => {
     <>
       <div>
         <Container>
-          <h1>Search Music - Deezer Api</h1>
-          <Search fetch={fetch} />
+          <h1>Search Music Engine</h1>
+          <Search fetch={fetchData} />
         </Container>
       </div>
       <Container>
